@@ -12,7 +12,7 @@ S.Background = styled.div`
 
 S.Wrapper = styled.div`
   width: 430px;
-  height: 800px;
+  height: 700px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -24,6 +24,9 @@ S.Header = styled.header`
   height: 100px;
   display: flex;
   align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  /* color: #8732f5; */
 `;
 
 S.Nav = styled.nav`
