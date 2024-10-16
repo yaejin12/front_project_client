@@ -1,5 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import BasicInput from "../../components/input/BasicInput";
+import S from "./styles";
+import Button from "../../components/button/Button";
 
 function SignUp() {
   /**
@@ -23,11 +26,15 @@ function SignUp() {
     handleSubmit,
     getValues,
     formState: { isSubmitted, isSubmitting, errors },
-  } = useForm({ mode: "onchange" });
+  } = useForm({ mode: "onChange" });
+
 
   //정규식 문법
-  const emailRegex = null;
+  const emailRegex =
+    /^[A-Za-z0-9]([-_.]?[A-Za-z0-9])*@[A-Za-z0-9]([-_.]?[A-Za-z0-9])*\.[A-Za-z]{2,3}$/;
 
+  const pwRegex =
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
   return (
     <form
       className="form"
@@ -35,21 +42,62 @@ function SignUp() {
         console.log("전송");
       })}
     >
-      <label className="label">
-        <p className="title">이메일</p>
-        <input
-          type="text"
-          className="BasicInput"
-          {...register("email", {
-            required: true,
-            pattern: { value: emailRegex },
-          })}
-        />
-        {errors?.email?.type === "required" && (
-          <p>이메일을 다시 입력해주세요</p>
-        )}
-        {errors?.email?.type === "pattern" && <p>이메일을 다시 입력해주세요</p>}
-      </label>
+      <S.Title>회원가입</S.Title>
+      {/* 아이디 */}
+      <S.InputWrapper>
+        <S.Label>
+          <BasicInput
+            type="email"
+            placeholder={"이메일"}
+            {...register("email", {
+              required: true,
+              pattern: { value: emailRegex },
+            })}
+          />
+          {errors?.email?.type === "required" && <p>이메일을 입력해주세요.</p>}
+          {errors?.email?.type === "pattern" && (
+            <p>이메일을 형식이 아닙니다.</p>
+          )}
+        </S.Label>
+      </S.InputWrapper>
+      {/* 비밀번호 */}
+      <S.InputWrapper>
+        <S.Label>
+          <BasicInput
+            type="password"
+            placeholder={"비밀번호"}
+            {...register("password", {
+              required: true,
+              pattern: { value: pwRegex },
+            })}
+          />
+          {errors?.password?.type === "required" && (
+            <p>비밀번호를 입력해주세요.</p>
+          )}
+          {errors?.password?.type === "pattern" && (
+            <p>비밀번호 형식이 아닙니다.</p>
+          )}
+        </S.Label>
+      </S.InputWrapper>
+      {/* 비밀번호 확인 */}
+      <S.InputWrapper>
+        <S.Label>
+          <BasicInput
+            type="passwordCk"
+            placeholder={"비밀번호 확인"}
+            {...register("passwordCk", {
+              required: true,
+            })}
+          />
+          {errors?.password?.type === "required" && (
+            <p>비밀번호를 입력해주세요.</p>
+          )}
+        </S.Label>
+      </S.InputWrapper>
+      {/* 버튼 */}
+      <S.ButtonWrapper>
+      <Button>완료</Button>
+      </S.ButtonWrapper>
     </form>
   );
 }

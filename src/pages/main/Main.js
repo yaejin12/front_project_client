@@ -1,22 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import S from "../main/styles";
-const logo = process.env.PUBLIC_URL + "/images/main/Group 284.svg";
+import Button from "../../components/button/Button";
+const logo = process.env.PUBLIC_URL + "/images/main/Group 20.svg";
 
 function Main() {
   return (
     <S.Wrapper>
-      <div className="img-wrapper">
+      <S.ImageWrapper>
         <img src={logo} alt="이미지"></img>
-      </div>
-      <div className="buttonWrapper">
+      </S.ImageWrapper>
+      <S.ButtonWrapper>
         <Link to={"/signIn"}>
-          <button>로그인</button>
+          <Button>로그인</Button>
         </Link>
         <Link to={"/signUp"}>
-          <button>회원가입</button>
+          <Button>회원가입</Button>
         </Link>
-      </div>
+      </S.ButtonWrapper>
     </S.Wrapper>
   );
 }

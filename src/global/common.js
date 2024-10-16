@@ -48,3 +48,12 @@ export const fadeIn = keyframes`
         transform: translateY(0);
     }
 `;
+
+export const Title = css`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 50px;
+`;

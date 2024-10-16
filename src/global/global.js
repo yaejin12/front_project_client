@@ -88,8 +88,7 @@ html,
 body {
   width: auto;
   height: 100%;
-  font-family: "Pretendard", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--color-bk);
 }
 
@@ -241,63 +240,6 @@ select::-ms-expand {
   /* 화살표 없애기 for IE10, 11*/
 }
 
-/* 공통 컨텐츠 font */
-/* Pretendard - 한글적용 */
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  src: url("../fonts/pretendard/Pretendard-Thin.woff") format("woff");
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  src: url("../fonts/pretendard/Pretendard-ExtraLight.woff") format("woff");
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  src: url("../fonts/pretendard/Pretendard-Light.woff") format("woff");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  src: url("../fonts/pretendard/Pretendard-Regular.woff") format("woff");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  src: url("../fonts/pretendard/Pretendard-Medium.woff") format("woff");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  src: url("../fonts/pretendard/Pretendard-SemiBold.woff") format("woff");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  src: url("../fonts/pretendard/Pretendard-Bold.woff") format("woff");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  src: url("../fonts/pretendard/Pretendard-ExtraLight.woff") format("woff");
-  font-weight: 800;
-}
 
 `;
 export default GlobalStyle;

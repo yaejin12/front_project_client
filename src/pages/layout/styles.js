@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { flexCenter } from "../../global/common";
+import { getColor } from "../../global/theme";
 
 const S = {};
 
@@ -25,8 +26,8 @@ S.Header = styled.header`
   display: flex;
   align-items: center;
   font-weight: 600;
-  font-size: 14px;
-  /* color: #8732f5; */
+  /* font-size: 14px; */
+  color: ${getColor("main")};
 `;
 
 S.Nav = styled.nav`
@@ -35,6 +36,22 @@ S.Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: 1px solid ${getColor("Gray.1")};
+
+  .icon {
+    color: #786e85;
+    font-size: 18px;
+  }
+  a {
+    text-align: center;
+  }
+  p {
+    color: ${getColor("Gray.2")};
+    font-style: 10px;
+    margin-top: 7px;
+    font-size: 10px;
+    font-weight: 500;
+  }
 `;
 
 S.Main = styled.main`

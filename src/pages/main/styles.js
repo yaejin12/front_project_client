@@ -18,15 +18,20 @@ S.Wrapper = styled.div`
 S.ImageWrapper = styled.div`
   flex: 0.7;
   ${flexCenter}
+
+  img {
+    width: 80px;
+    margin-bottom: 170px;
+  }
 `;
 
 S.ButtonWrapper = styled.div`
   width: 100%;
-  height: 110px;
+  height: 96px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 0 100px 0;
+  /* margin: 0 0 50px 0; */
 `;
 
 export default S;
