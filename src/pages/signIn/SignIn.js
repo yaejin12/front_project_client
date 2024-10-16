@@ -22,7 +22,7 @@ function SignIn() {
     <form
       className="form"
       onSubmit={handleSubmit(() => {
-        console.log("전송");
+       
       })}
     >
       <S.Title>로그인</S.Title>

@@ -16,6 +16,11 @@ S.Input = styled.input`
     font-weight: 600;
     color: #786e85;
   }
+
+  &.wBG {
+    background-color: #fff;
+    color: #000000;
+  }
 `;
 
 export default S;

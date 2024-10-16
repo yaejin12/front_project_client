@@ -5,6 +5,7 @@ import S from "./styles";
 
 function Todo() {
   const [todoData, setTodoData] = useState([]);
+  const [updateTodoList, setUpdateTodoList] = useState(false);
   const getTodo = async () => {
     const response = await fetch("http://localhost:4000/todo");
     const data = await response.json();
@@ -13,15 +14,19 @@ function Todo() {
 
   useEffect(() => {
     getTodo();
-  }, [todoData]);
+  }, [updateTodoList]);
 
   return (
     <>
-      <TodoInsert todoData={todoData} setTodoData={setTodoData} />
+      <TodoInsert
+        todoData={todoData}
+        setTodoData={setTodoData}
+        setUpdateTodoList={setUpdateTodoList}
+      />
       <S.ContainerWrapper>
         {todoData &&
           todoData?.map((todo) => (
-            <TodoContainer key={todo.id} todoData={todo} />
+            <TodoContainer key={todo.id} todoData={todo} setUpdateTodoList={setUpdateTodoList}/>
           ))}
       </S.ContainerWrapper>
     </>

@@ -39,7 +39,7 @@ function SignUp() {
     <form
       className="form"
       onSubmit={handleSubmit(() => {
-        console.log("전송");
+  
       })}
     >
       <S.Title>회원가입</S.Title>
