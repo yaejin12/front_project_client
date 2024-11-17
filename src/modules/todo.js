@@ -1,6 +1,8 @@
-import { handleAction } from "redux-actions";
+import { handleActions } from "redux-actions";
 
-const todoInitialValue = {};
-const todo = handleAction({}, todoInitialValue);
+const todoInitialValue = {
+  todo: [], // 기본 상태를 명확하게 정의
+};
+const todo = handleActions({}, todoInitialValue);
 
 export default todo;
