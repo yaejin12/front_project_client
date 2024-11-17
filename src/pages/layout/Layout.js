@@ -24,15 +24,15 @@ function Layout() {
             <FontAwesomeIcon icon={faCalendarCheck} className="icon" />
             <p>todo</p>
           </NavLink>
-          <NavLink to={"/todo"}>
+          <NavLink to={"/"}>
             <FontAwesomeIcon icon={faSearch} className="icon" />
             <p>검색</p>
           </NavLink>
-          <NavLink to={"/todo"}>
+          <NavLink to={"/"}>
             <FontAwesomeIcon icon={faBell} className="icon" />
             <p>알림</p>
           </NavLink>
-          <NavLink to={"/todo"}>
+          <NavLink to={"my"}>
             <FontAwesomeIcon icon={faUser} className="icon" />
             <p>My</p>
           </NavLink>

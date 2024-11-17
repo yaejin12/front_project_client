@@ -14,7 +14,6 @@ function TodoContainer({ todoData, setUpdateTodoList }) {
   const [isCheck, setIsCheck] = useState(todoData.isChecked);
   const [isEditIcon, setIsEditIcon] = useState(false);
   const [value, onChangeValue, setValue] = useInput(todoData.title);
-  console.log("value", value);
 
   // 체크박스 클릭 유무
   const checkBoxClickHandler = async () => {

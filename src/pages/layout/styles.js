@@ -44,6 +44,14 @@ S.Nav = styled.nav`
   }
   a {
     text-align: center;
+    &.active {
+      .icon {
+        color: ${getColor("main")};
+      }
+      p {
+        color: ${getColor("main")};
+      }
+    }
   }
   p {
     color: ${getColor("Gray.2")};
